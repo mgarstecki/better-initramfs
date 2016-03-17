@@ -84,6 +84,7 @@ use tuxonice TuxOnIceResume
 run_hooks pre_newroot_mount
 use rootdelay rootdelay
 emount /newroot
+run_hooks pre_newroot_usr_mount
 emount /newroot/usr
 # Wait for sshd connection only if rescueshell have never occur.
 use sshd && was_shell || wait_sshd
